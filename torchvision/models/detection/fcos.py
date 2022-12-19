@@ -546,6 +546,8 @@ class FCOS(nn.Module):
                     "boxes": image_boxes[keep],
                     "scores": image_scores[keep],
                     "labels": image_labels[keep],
+                    "centerness": box_ctrness_per_image,
+                    "box_regression": box_regression_per_image,
                 }
             )
 
